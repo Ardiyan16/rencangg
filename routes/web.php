@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('route');
+// });
+
+//auth
+Route::get('/login', [AuthController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login/proseslogin', [AuthController::class, 'auth']);
+Route::post('/logout', [AuthController::class, 'logout']);
+
+//admin
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+
+//users
+Route::get('/', [FrontendController::class, 'index']);
