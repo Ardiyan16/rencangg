@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\PortfolioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,10 @@ Route::post('/logout', [AuthController::class, 'logout']);
 
 //admin
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+// Route::get('/admin/portfolio', [PortfolioController::class, 'index'])->middleware('auth');
+Route::get('/admin/tambah_portfolio', [PortfolioController::class, 'create'])->middleware('auth');
+Route::resource('admin/portfolio', PortfolioController::class)->middleware('auth');
+
 
 //users
 Route::get('/', [FrontendController::class, 'index']);
