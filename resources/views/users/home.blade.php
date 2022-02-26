@@ -1,216 +1,316 @@
 @extends('layout.user')
 @section('userlayout')
 
-<!-- Masthead-->
-<header class="masthead">
-    <div class="container px-4 px-lg-5 h-100">
-        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-8 align-self-end">
-                <h1 class="text-white font-weight-bold">Selamat Datang di Rencang.id</h1>
-                <hr class="divider" />
-            </div>
-            <div class="col-lg-8 align-self-baseline">
-                <p class="text-white-75 mb-5">membantu anda dalam mengembangkan bisnis dengan sistem informasi!</p>
-                <a class="btn btn-primary btn-xl" href="#about">Hubungi Kami</a>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- About-->
-<section class="page-section bg-primary" id="about">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="text-white mt-0">Apa itu rencang.id?</h2>
-                <hr class="divider divider-light" />
-                <p class="text-white-75 mb-4">Rencang.id bergerak dalam berbagai bidang diantaranya konsultan IT dan software development. Rencang.id hadir untuk membantu memberikan 
-                    solusi, dan pengembangan bisnis anda dengan maksimal dengan menggunakan kebutuhan teknologi informasi!</p>
-                <a class="btn btn-light btn-xl" href="#services">Mulai!</a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Services-->
-<section class="page-section" id="services">
-    <div class="container px-4 px-lg-5">
-        <h2 class="text-center mt-0">Our Service</h2>
-        <hr class="divider" />
-        <div class="row gx-4 gx-lg-5">
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mt-5">
-                    <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                    <h3 class="h4 mb-2">Website Development</h3>
-                    <p class="text-muted mb-0">Meningkatkan proses bisnis anda dengan sistem informasi website!</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mt-5">
-                    <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                    <h3 class="h4 mb-2">Design</h3>
-                    <p class="text-muted mb-0">Memperindah tampilan bisnis dengan desain yang menarik.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mt-5">
-                    <div class="mb-2"><i class="bi-phone fs-1 text-primary"></i></div>
-                    <h3 class="h4 mb-2">Mobile Development</h3>
-                    <p class="text-muted mb-0">Meningkatkan proses bisnis anda dengan sistem informasi berbasis mobile phone!</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mt-5">
-                    <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                    <h3 class="h4 mb-2">Consulting</h3>
-                    <p class="text-muted mb-0">Menerima konsultasi IT untuk pengembangan bisnis anda</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Portfolio-->
-<div id="portfolio">
-    <h2 class="text-center mt-0">Our Portfolio</h2>
-    <hr class="divider" />
-    <div class="container-fluid p-0">
-        <div class="row g-0">
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
-                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
-                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
-                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
-                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
-                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
-                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
-                    <div class="portfolio-box-caption p-3">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
+<div class="hero-slider">
+	<div class="slider-item th-fullpage hero-area" style="background-image: url(frontend/images/slider/slider-bg-1.jpg);">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Selamat Datang di<br>
+						Rencang.id</h1>
+					<p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Membantu inovasi anda dengan sistem informasi<br> mempermudah proses inovasi bisnis anda dengan sistem, <br> 
+                        kemajuan teknologi mempermudah anda menjalankan proses inovasi bisnis.</p>
+					<a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main" href="service.html">Hubungi Kami</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="slider-item th-fullpage hero-area" style="background-image: url(frontend/images/slider/slider1.jpg);">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Selamat Datang di<br>
+						Rencang.id</h1>
+					<p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Membantu inovasi anda dengan sistem informasi<br> mempermudah proses inovasi bisnis anda dengan sistem, <br> 
+                        kemajuan teknologi mempermudah anda menjalankan proses inovasi bisnis.</p>
+					<a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main" href="service.html">Hubungi Kami</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<!-- Call to action-->
-<section class="page-section bg-dark text-white">
-    <div class="container px-4 px-lg-5 text-center">
-        <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-        <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
-    </div>
-</section>
-<!-- Contact-->
-<section class="page-section" id="contact">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-lg-8 col-xl-6 text-center">
-                <h2 class="mt-0">Let's Get In Touch!</h2>
-                <hr class="divider" />
-                <p class="text-muted mb-5">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!</p>
-            </div>
+
+
+
+
+<!--
+Start About Section
+==================================== -->
+<section class="service-2 section" id="about">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12">
+        <!-- section title -->
+        <div class="title text-center">
+          <h2>Apa itu Rancang.id ?</h2>
+          <p>Rencang.id merupakan penyedia layanan pembuatan sistem informasi untuk mempermudah anda dalam melaksanakan segala permasalahan dengan bantuan teknologi informasi. </p>
+          <div class="border"></div>
         </div>
-        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-            <div class="col-lg-6">
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <!-- Name input-->
-                    <div class="form-floating mb-3">
-                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                        <label for="name">Full name</label>
-                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                    </div>
-                    <!-- Email address input-->
-                    <div class="form-floating mb-3">
-                        <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                        <label for="email">Email address</label>
-                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                    </div>
-                    <!-- Phone number input-->
-                    <div class="form-floating mb-3">
-                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                        <label for="phone">Phone number</label>
-                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                    </div>
-                    <!-- Message input-->
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                        <label for="message">Message</label>
-                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                    </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                    <!-- Submit Button-->
-                    <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
-                </form>
+        <!-- /section title -->
+      </div>
+
+      <div class="col-md-12">
+        <div class="row text-center">
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="service-item">
+              <i class="tf-ion-ios-alarm-outline"></i>
+              <h4>Pengerjaan Tepat Waktu</h4>
+              <p>mengerjakan project sesuai dengan waktu yang telah ditentukan.</p>
             </div>
-        </div>
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                <div>+1 (555) 123-4567</div>
+          </div><!-- END COL -->
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="service-item">
+              <i class="tf-ion-ios-briefcase-outline"></i>
+              <h4>Konsultasi</h4>
+              <p>Dapat berkonsultasi akan kebutuhan sistem sesuai dengan keinginan anda.</p>
             </div>
+          </div><!-- END COL -->
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="service-item">
+              <i class="tf-ion-ios-email-outline"></i>
+              <h4>Mudah dihubungi</h4>
+              <p>kami sangat mudah untuk dihubungi untuk mempermudah membantu anda.</p>
+            </div>
+          </div><!-- END COL -->
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="service-item">
+              <i class="tf-ion-ios-locked-outline"></i>
+              <h4>Keamanan Sistem</h4>
+              <p>Keamanan untuk sistem anda.</p>
+            </div>
+          </div><!-- END COL -->
         </div>
-    </div>
-</section>
+      </div>
+    </div> <!-- End row -->
+  </div> <!-- End container -->
+</section> <!-- End section -->
+
+
+<!--
+Start Call To Action
+==================================== -->
+<section class="call-to-action section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h2>Mari Berdigitaslisasi</h2>
+				<p>Silahkan hubungi kami untuk mengatasi permasalahan anda. <br> membantu anda menyelesakan proses digital anda.</p>
+				<a href="" class="btn btn-main">Contact Us</a>
+			</div>
+		</div> 		<!-- End row -->
+	</div>   	<!-- End container -->
+</section>   <!-- End section -->
+
+<!--
+		Start Counter Section
+		==================================== -->
+		
+		<section  class="counter-wrapper section-sm" >
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="title">
+							<h2>Award-Winning Agency</h2>
+							<p>Vestibulum nisl tortor, consectetur quis imperdiet bibendum, laoreet sed arcu. Sed condimentum iaculis ex, in faucibus lorem accumsan non. Donec mattis tincidunt metus. Morbi sed tortor a risus luctus dignissim.</p>
+						</div>
+					</div>
+					<!-- first count item -->
+					<div class="col-md-3 col-sm-6 col-xs-6 text-center " >
+						<div class="counters-item">
+							<i class="tf-ion-ios-alarm-outline"></i>
+							<div>
+							    <span class="counter" data-count="150">0</span>
+							</div>
+							<h3>Happy Clients</h3>
+						</div>
+					</div>
+					<!-- end first count item -->
+				
+					<!-- second count item -->
+					<div class="col-md-3 col-sm-6 col-xs-6 text-center " >
+						<div class="counters-item">
+							<i class="tf-ion-ios-analytics-outline"></i>
+							<div>
+							    <span class="counter" data-count="130">0</span>
+							</div>
+							<h3>Projects completed</h3>
+						</div>
+					</div>
+					<!-- end second count item -->
+				
+					<!-- third count item -->
+					<div class="col-md-3 col-sm-6 col-xs-6 text-center "  >
+						<div class="counters-item">
+							<i class="tf-ion-ios-compose-outline"></i>
+							<div>
+							    <span class="counter" data-count="99">0</span>
+							</div>
+				            <h3>Positive feedback</h3>
+							
+						</div>
+					</div>
+					<!-- end third count item -->
+					
+					<!-- fourth count item -->
+					<div class="col-md-3 col-sm-6 col-xs-6 text-center ">
+						<div class="counters-item kill-border">
+							<i class="tf-ion-ios-bolt-outline"></i>
+							<div>
+							    <span class="counter" data-count="250">0</span>
+							</div>
+							<h3>Cups of Coffee</h3>
+						</div>
+					</div>
+					<!-- end fourth count item -->
+				</div> 		<!-- end row -->
+			</div>   	<!-- end container -->
+		</section>   <!-- end section -->
+
+<!-- Start Testimonial
+=========================================== -->
+		
+	<section class="testimonial section" id="testimonial">
+		<div class="container">
+			<div class="row">				
+				<div class="col-lg-12">
+					<!-- testimonial wrapper -->
+					<div class="testimonial-slider">
+						<!-- testimonial single -->
+						<div class="item text-center">
+							<i class="tf-ion-chatbubbles"></i>
+							<!-- client info -->
+							<div class="client-details">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
+							</div>
+							<!-- /client info -->
+							<!-- client photo -->
+							<div class="client-thumb">
+								<img src="images/client-logo/clients-1.jpg" class="img-fluid" alt="">
+							</div>
+							<div class="client-meta">
+								<h3>William Martin</h3>
+								<span>CEO , Company Name</span>
+							</div>
+							<!-- /client photo -->
+						</div>
+						<!-- /testimonial single -->
+				
+						<!-- testimonial single -->
+						<div class="item text-center">
+							<i class="tf-ion-chatbubbles"></i>
+							<!-- client info -->
+							<div class="client-details">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
+							</div>
+							<!-- /client info -->
+							<!-- client photo -->
+							<div class="client-thumb">
+								<img src="images/client-logo/clients-2.jpg" class="img-fluid" alt="">
+							</div>
+							<div class="client-meta">
+								<h3>Emma Harrison</h3>
+								<span>CEO , Company Name</span>
+							</div>
+							<!-- /client photo -->
+						</div>
+						<!-- /testimonial single -->
+					
+						<!-- testimonial single -->
+						<div class="item text-center">
+							<i class="tf-ion-chatbubbles"></i>
+							<!-- client info -->
+							<div class="client-details">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
+							</div>
+							<!-- /client info -->
+							<!-- client photo -->
+							<div class="client-thumb">
+								<img src="images/client-logo/clients-3.jpg" class="img-fluid" alt="">
+							</div>
+							<div class="client-meta">
+								<h3>Alexander Lucas</h3>
+								<span>CEO , Company Name</span>
+							</div>
+							<!-- /client photo -->
+						</div>
+						<!-- /testimonial single -->
+					</div>
+				</div> 		<!-- end col lg 12 -->
+			</div>	    <!-- End row -->
+		</div>       <!-- End container -->
+	</section>    <!-- End Section -->
+
+<!--
+		Start Blog Section
+		=========================================== -->
+
+<section class="blog" id="blog">
+	<div class="container">
+		<div class="row">
+
+			<!-- section title -->
+			<div class="col-12">
+				<div class="title text-center ">
+					<h2> Blog <span class="color">Terbaru</span></h2>
+					<div class="border"></div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus facere accusamus, reprehenderit libero
+						inventore nam.</p>
+				</div>
+			</div>
+			<!-- /section title -->
+			<!-- single blog post -->
+			<article class="col-md-4 col-sm-6 col-xs-12 clearfix ">
+				<div class="post-item">
+					<div class="media-wrapper">
+						<img src="images/blog/post-1.jpg" alt="amazing caves coverimage" class="img-fluid">
+					</div>
+
+					<div class="content">
+						<h3><a href="single-post.html">Reasons to Smile</a></h3>
+						<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+							moon officia aute, non skateboard dolor brunch.</p>
+						<a class="btn btn-main" href="single-post.html">Read more</a>
+					</div>
+				</div>
+			</article>
+			<!-- /single blog post -->
+
+			<!-- single blog post -->
+			<article class="col-md-4 col-sm-6 col-xs-12 ">
+				<div class="post-item">
+					<div class="media-wrapper">
+						<img src="images/blog/post-2.jpg" alt="amazing caves coverimage" class="img-fluid">
+					</div>
+
+					<div class="content">
+						<h3><a href="single-post.html">A Few Moments</a></h3>
+						<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+							moon officia aute, non skateboard dolor brunch.</p>
+						<a class="btn btn-main" href="single-post.html">Read more</a>
+					</div>
+				</div>
+			</article>
+			<!-- end single blog post -->
+
+			<!-- single blog post -->
+			<article class="col-md-4 col-sm-6 col-xs-12 ">
+				<div class="post-item">
+					<div class="media-wrapper">
+						<img src="images/blog/post-3.jpg" alt="amazing caves coverimage" class="img-fluid">
+					</div>
+
+					<div class="content">
+						<h3><a href="single-post.html">Hints for Life</a></h3>
+						<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+							moon officia aute, non skateboard dolor brunch.</p>
+						<a class="btn btn-main" href="single-post.html">Read more</a>
+					</div>
+				</div>
+			</article>
+			<!-- end single blog post -->
+		</div> <!-- end row -->
+	</div> <!-- end container -->
+</section> <!-- end section -->
 
 @endsection

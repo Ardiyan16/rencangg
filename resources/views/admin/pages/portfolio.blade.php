@@ -31,14 +31,19 @@
                         @endphp
                         @foreach ($portfolio as $por)
                         <tr>
+                            <td>{{ $no++ }}</td>
                             <td>{{ $por->judul }}</td>
                             <td>{{ $por->kategori }}</td>
                             <td>{{ $por->tahun }}</td>
                             <td>{{ $por->deskripsi }}</td>
-                            <td><img width="100px" src="{{ url('/foto_portofolio/'. $por->image) }}"></td>
-                            <td></td>
+                            <td><img width="100px" src="{{ url('/storage/'. $por->image) }}"></td>
                             <td>
-                                <a href="{{ route('portfolio.edit', $pot->id) }}" class="btn btn-info"><i class="fa fa-edit"></i> Edit</a>
+                                <a href="{{ route('portfolio.edit', $por->id) }}" class="badge bg-info border-0" style="color: white"><i class="fa fa-edit"></i> Edit</a> |
+                                <form action="/admin/portfolio/{{ $por->id }}" method="post" class="d-inline">
+                                    @method('delete')
+                                    @csrf
+                                    <button class="badge bg-danger border-0" style="color: white" onclick="return confirm('Apakah anda yakin hapus portfolio ini?')"><i style="color: white" class="fa fa-trash"></i> Hapus</button>
+                                </form>
                             </td>
                         </tr>
                         @endforeach

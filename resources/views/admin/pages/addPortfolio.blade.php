@@ -15,7 +15,10 @@
             <form action="{{ url('admin/portfolio') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <label>Judul Portfolio</label>
-                <input name="judul" type="text" placeholder="Judul.." class="form-control" required>
+                <input name="judul" type="text" placeholder="Judul.." value="{{ old('judul') }}" class="form-control @error('judul') is-invalid @enderror" >
+                @error('judul')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
                 <br>
                 <label>Kategori</label>
                 <select name="kategori" class="form-control">
@@ -32,11 +35,18 @@
                 </select>
                 <br>
                 <label>Deskripsi</label>
-                <textarea name="deskripsi" class="form-control" id="deskripsi" cols="10" rows="4"></textarea>
+                <textarea name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" cols="10" rows="4">{{ old('deskripsi') }}</textarea>
+                @error('deskripsi')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
                 <br>
                 <label>Image</label>
-                <input name="image" type="file" placeholder="" class="form-control">
+                <input name="image" type="file" placeholder="" id="image" class="form-control @error('image') is-invalid @enderror" onchange="previewImage()">
+                @error('image')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
                 <p>maksimum 3MB</p>
+                <img class="img-preview img-fluid col-sm-3">
                 <br>
                 <button type="reset" class="btn btn-danger"> <span class="fa fa-times"></span> Reset</button>
                 <button type="submit" class="btn btn-primary"> <span class="fa fa-save"></span> Save</button>
@@ -44,5 +54,19 @@
         </div>
     </div>
 </div>
+<script>
 
+    function previewImage() {
+        const image = document.querySelector('#image');
+        const imgPreview = document.querySelector('.img-preview');
+        imgPreview.style.display = 'block';
+
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(image.files[0]);
+        oFReader.onload = function(oFREvent) {
+            imgPreview.src = oFREvent.target.result;
+        }
+    }
+
+</script>
 @endsection

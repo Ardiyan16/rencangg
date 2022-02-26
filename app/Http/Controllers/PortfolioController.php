@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Portfolio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
-use Alert;
+use RealRashid\SweetAlert\Facades\Alert;
 class PortfolioController extends Controller
 {
 
@@ -24,24 +25,21 @@ class PortfolioController extends Controller
 
     public function store(Request $request)
     {
-        $image = $request->file('image');
-
-        // nama file
-        $nama_image = time() . "_" . $image->getClientOriginalName();
-
-        // isi dengan nama folder tempat kemana file diupload
-        $tujuan_upload = 'foto_portofolio';
-        $image->move($tujuan_upload, $nama_image);
-
-        DB::table('portfolio')->insert([
-            'judul' => $request->judul,
-            'tahun' => $request->tahun,
-            'kategori' => $request->kategori,
-            'image' => $nama_image,
-            'deskripsi' => $request->deskripsi
+        $validate = $request->validate([
+            'judul' => 'required',
+            'kategori' => 'required',
+            'tahun' => 'required',
+            'deskripsi' => 'required',
+            'image' => 'image|file|max:3024'
         ]);
+
+        if($request->file('image')) {
+            $validate['image'] = $request->file('image')->store('portfolio');
+        }
+
+        Portfolio::create($validate);
         Alert::success('Berhasil', 'Data Portfolio Berhasil di Simpan');
-        return redirect('/portfolio');
+        return redirect('/admin/portfolio');
     }
 
     public function show($id)
@@ -51,17 +49,43 @@ class PortfolioController extends Controller
 
     public function edit($id)
     {
-        //
+        $param['title'] = 'admin | Edit Portfolio';
+        $param['edit'] = Portfolio::findOrFail($id);
+        return view('admin.pages.editPortfolio', $param);
     }
 
     public function update(Request $request, $id)
     {
-        //
+        $validate = $request->validate([
+            'judul' => 'required',
+            'kategori' => 'required',
+            'tahun' => 'required',
+            'deskripsi' => 'required',
+            'image' => 'image|file|max:3024'
+        ]);
+
+        if($request->file('image')) {
+
+            if ($request->old_image) {
+                Storage::delete($request->old_image);
+            }
+
+            $validate['image'] = $request->file('image')->store('portfolio');
+        }
+
+        Portfolio::find($id)->update($validate);
+        Alert::success('Berhasil', 'Data Portfolio Berhasil di Update');
+        return redirect('/admin/portfolio');
     }
 
 
-    public function destroy($id)
+    public function destroy(Portfolio $portfolio)
     {
-        //
+        if ($portfolio->image) {
+            Storage::delete($portfolio->image);
+        }
+        Portfolio::destroy($portfolio->id);
+        Alert::success('Berhasil', 'Data Portfolio Berhasil di Hapus');
+        return redirect('/admin/portfolio');
     }
 }

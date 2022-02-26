@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Portfolio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FrontendController extends Controller
 {
@@ -14,6 +16,10 @@ class FrontendController extends Controller
     public function index()
     {
         $param['title'] = 'Home';
+        $param['portfolio'] = DB::table('portfolios')
+                                ->orderBy('id', 'desc')
+                                ->limit('6')
+                                ->get();
         return view('users.home', $param);
     }
 
